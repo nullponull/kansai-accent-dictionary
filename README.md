@@ -6,7 +6,7 @@
 
 - **収録語数**: 4,615語
 - **アクセント体系**: 京阪式（Keihan-type）
-- **形式**: CSV、MeCab辞書形式
+- **形式**: CSV、MeCab辞書形式、VOICEVOX/VOICEPEAK形式
 
 ## 🎯 特徴
 
@@ -45,6 +45,9 @@ kansai-accent-dictionary/
 ├── mecab/
 │   ├── kansai_accent.csv       # MeCab形式の辞書
 │   └── README.md               # MeCab辞書の使用方法
+├── voicevox/
+│   ├── kansai_accent_voicevox.csv  # VOICEVOX/VOICEPEAK形式（4,346語）
+│   └── README.md                   # VOICEVOX辞書の使用方法
 ├── docs/
 │   ├── introduction.md          # 京阪式アクセント入門
 │   └── data_sources.md          # データソースの詳細
@@ -100,6 +103,10 @@ with open('data/kansai_accent_dict.csv', 'r', encoding='utf-8') as f:
 ### MeCab形式の辞書
 
 MeCab形式の辞書の使用方法については、`mecab/README.md`を参照してください。
+
+### VOICEVOX/VOICEPEAK形式の辞書
+
+VOICEVOX/VOICEPEAKで関西弁アクセントを使用する方法については、`voicevox/README.md`を参照してください。
 
 ## 📊 データ形式
 
