@@ -181,10 +181,10 @@ def convert_to_voicevox(input_csv, output_csv):
                 'priority': priority
             })
     
-    # CSVに書き出し
+    # CSVに書き出し（ヘッダー行なし）
     with open(output_csv, 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
-        
+        # ヘッダー行は書き込まない
         for entry in entries:
             writer.writerow([
                 entry['surface'],
