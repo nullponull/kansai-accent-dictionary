@@ -181,9 +181,10 @@ def convert_to_voicevox(input_csv, output_csv):
                 'priority': priority
             })
     
-    # CSVに書き出し（ヘッダー行なし）
+    # CSVに書き出し（ヘッダー行なし、CRLF改行）
+    # newline=''を指定し、lineterminatorでCRLFを明示的に指定
     with open(output_csv, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator='\r\n')
         # ヘッダー行は書き込まない
         for entry in entries:
             writer.writerow([
